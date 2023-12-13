@@ -1,0 +1,135 @@
+* {
+    font-family: 'Roboto', sans-serif; 
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+nav .nav-logo h3 {
+    text-shadow: 4px 0px 8px rgba(0, 0, 0, 1);
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+
+main form {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    position: fixed;
+    padding: 40px;
+    width: 380px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0,0.6);
+    border-radius: 20px;
+}
+
+main form h1 {
+    text-align: center;
+    color: aliceblue;
+    margin: 0;
+}
+
+main form .form-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 20px;
+}
+
+main form .form-links a {
+    text-decoration: none;
+    transform: scale(1.5,1.5);
+    transition: 300ms ease-in-out;
+    color: black;
+}
+
+main form .form-links a:hover {
+    transform: scale(2);
+}
+
+main form .form-links .fa-twitter{color: rgb(62, 167, 167);}
+main form .form-links .fa-instagram{color: rgb(189, 62, 121);}
+main form .form-links .fa-facebook{color: rgb(84, 91, 201);}
+main form .form-links .fa-envelope{color: rgb(216, 37, 37);}
+
+main form :where(.username , .password){
+    display: flex;
+    border-bottom: 1px solid aliceblue;
+}
+
+main form :where(.username input , .password input) {
+    margin: 10px;
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: aliceblue;
+}
+
+main form i {
+    color: aliceblue;
+}
+
+main form .username i {
+    display: flex;
+    align-items: center;
+}
+
+main form .password i {
+    display: flex;
+    align-items: center;
+}
+
+main form .remember-me {
+    margin: 15px;
+}
+
+main label {
+    color: aliceblue;
+}
+
+main form .register a {
+    color: aliceblue;
+}
+
+main .submit-button {
+    display: flex;
+    justify-content: center;
+}
+
+main .submit-button input {
+    color: aliceblue;
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: 300ms ease-in-out;
+    border: 1px solid rgb(71, 44, 44);
+    background: linear-gradient(90deg, rgba(36,9,0,1) 0%, rgba(121,9,48,1) 35%, rgba(255,0,0,1) 100%); 
+}
+
+@media (max-width: 768px) {
+    main form {
+        width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    main form {
+        width: 220px;
+    }
+}

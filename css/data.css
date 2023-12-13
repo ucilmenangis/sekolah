@@ -1,0 +1,290 @@
+html {
+    height: 100%;
+    font:'Roboto', sans-serif;
+}
+
+body {
+    height: 100%;
+}
+
+nav {
+    background-color: rgba(9,27,64,1);
+    z-index: 99;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.nav-res {
+    z-index: 1;
+}
+
+.nav-res .nav-res-links {
+    background-color: rgba(9,27,64,1);
+}
+
+.nav-res .nav-res-links ul {
+    padding: 0;
+}
+
+.nav-res .nav-res-links ul li {
+    padding: 5px;
+}
+
+.nav-res .nav-res-links ul li a i {
+    display: flex;
+    justify-content: center;
+    width: 20px;
+    height: 16px;
+}
+
+.nav-res .nav-res-links ul li a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.nav-res .nav-res-links ul li a p {
+    margin: 0;
+}
+
+nav .nav-links .nav-search  {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav .nav-links .nav-a {
+    display: flex;
+    align-items: center;
+}
+
+nav .nav-links .nav-a form {
+    display: flex;
+    align-items: center;
+}
+
+nav .nav-links .nav-a input {
+    width: 120px;
+    height: 30px;
+}
+
+nav .nav-links .nav-search {
+    display: none;
+}
+
+nav .nav-links .nav-search form {
+    display: flex;
+    align-items: center;
+}
+
+nav .nav-links .nav-search a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+nav .nav-links .nav-search input {
+    width: 120px;
+    margin-right: 20px;
+}
+
+nav .nav-links .nav-a form input {
+    display: none;
+}
+
+nav .nav-links .nav-search form input {
+    display: none;
+}
+/*------------------------------------ main content ------------------------------*/
+main {
+    display: flex;
+}
+
+/* --------------------------------------------------sidebar-------------------------------------------------- */
+main .main-sidebar-fly {
+    height: 100%;
+}
+
+main .main-sidebar-fly .main-sidebar {
+    width: 200px;
+    height: 100%;
+
+}
+
+main .main-sidebar-fly .main-sidebar .main-sidebar-locate {
+    box-shadow: 25px -3px 107px -46px rgba(0,0,0,0.75);
+    height: 100%;
+    padding-top: 60px;
+    width: 200px;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    flex-direction: column;
+    position: fixed;
+    background-color: rgba(9,27,64,1);
+}
+
+main .main-sidebar-fly .main-sidebar .main-sidebar-locate .main-sidebar-links1 {
+    padding: 13px;
+    border-bottom: solid gray 1px;
+}
+
+main .main-sidebar-fly .main-sidebar .main-sidebar-locate .main-sidebar-links1 ul {
+    width: 100%;
+    padding: 0px;
+    margin: 0;
+}
+
+main .main-sidebar-fly .main-sidebar .main-sidebar-locate .main-sidebar-links1 ul li a{
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+    text-decoration: none;
+    gap: 10px;
+}
+
+main .main-sidebar-fly .main-sidebar .main-sidebar-locate .main-sidebar-links1 ul li a i {
+    width: 20px;
+    height: 16px;
+    text-align: center;
+}
+
+main .main-sidebar-fly .main-sidebar .main-sidebar-locate .main-sidebar-links1 ul li a p {
+    margin: 0;
+}
+
+main .main-sidebar-fly .main-sidebar .main-sidebar-locate .main-sidebar-links1 ul li {
+    padding: 10px;
+    list-style: none;
+}
+
+main .main-sidebar-fly .main-sidebar .main-sidebar-links {
+    height: 10%;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+main .main-sidebar-fly .main-sidebar .main-sidebar-links i {
+    color: aliceblue;
+}
+
+main .main-sidebar-fly .main-sidebar .main-sidebar-links1 {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: column;
+}
+
+/* -------------------------------------------------- main content --------------------------------------------------*/
+main .main-content {
+    padding: 10px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* background-color: #191919; */
+}
+
+main .main-content-header {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+main .main-content .main-content-text {
+    padding: 20px;
+    /* color: aliceblue; */
+}
+
+/*-------------------------------------------------- card --------------------------------------------------*/
+main .main-content .main-content-item {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+main .main-content .main-content-item .card-new {
+    box-shadow: 0px 29px 52px -16px rgba(0,0,0,0.75);
+    border: 2px solid black;
+    width: 300px;
+    border-radius: 15px;
+}
+
+main .main-content .main-content-item .card-header {
+    padding: 20px;
+    border-bottom: 1px black solid;
+}
+
+main .main-content .main-content-item .card-header .card-profile p{
+    margin: 0;
+}
+
+main .main-content .main-content-item .card-new .card-header :where(.card-status , .card-profile , .card-text){
+    text-align: center;
+}
+
+main .main-content .main-content-item .card-new .card-text {
+    padding: 25px;
+}
+
+main .main-content .main-content-item .card-new .card-action {
+    border-radius: 15px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    display: flex;
+    background-color: rgba(9,27,64,1);
+    padding: 10px;
+}
+
+main .main-content .main-content-item .card-new .card-action div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .main-content .main-content-item .card-new .card-action div a{
+    color: #ece8e8;
+    text-decoration: none;
+}
+
+main .main-content .main-content-item .card-new .card-action .card-action-edit a{
+    color: #a5ff13;
+}
+
+main .main-content .main-content-item .card-new .card-action .card-action-preview p{
+    /* text-align: center; */
+    color: #ece8e8;
+    margin: 0px;
+}
+
+main .main-content .main-content-item .card-new .card-action .card-action-delete a{
+    color: #f73302;
+}
+
+/*-------------------------------------------------- media --------------------------------------------------*/
+@media (max-width: 780px) {
+    nav .nav-links .nav-search {
+        display: flex;
+    }
+    
+    main .main-sidebar {
+        display: none;
+    }    
+}
+
+@media (max-width: 528px) {
+    nav .nav-logo h3 {
+        display: none;
+    }
+}
+
+.flex {
+    display: flex;
+}

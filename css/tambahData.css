@@ -1,0 +1,117 @@
+main {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar {
+    z-index: 1;
+}
+
+nav {
+    z-index: 50;
+}
+
+.nav-res {
+    z-index: 49;
+}
+
+.nav-res .nav-res-links{
+    background-color: rgb(191, 27, 27);
+}
+
+main .main-gambar {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("../img/19.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    filter: brightness(50%);
+}
+
+main .main-login-page {
+    background-color: rgb(0, 0, 0,0.6);
+    border-radius: 20px;
+    width: 350px;
+    height: 350px;
+    padding: 30px;
+    z-index: 1;
+}
+
+h1 {
+    color: aliceblue;
+    text-align: center;
+    margin: 0;
+}
+
+main .main-login-page input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+    margin: 10px;
+    color: aliceblue;
+}
+
+main .main-login-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+main .main-login-page form label {
+    color: aliceblue;
+}
+
+main .form-button {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+}
+
+main .form-button input{
+    background: linear-gradient(90deg, rgba(36,9,0,1) 0%, rgba(121,9,48,1) 35%, rgba(255,0,0,1) 100%); 
+    color: aliceblue;
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+main .form-footer-links {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+main .form-footer-links a{
+    color: black;
+    text-decoration: none;
+    transition: 300ms ease-in-out;
+}
+
+main .form-footer-links a:hover {
+    transform: scale(1.3,1.3);
+}
+
+main .form-footer-links .fa-twitter{color: rgb(62, 167, 167);}
+main .form-footer-links .fa-instagram{color: rgb(189, 62, 121);}
+main .form-footer-links .fa-facebook{color: rgb(84, 91, 201);}
+main .form-footer-links .fa-github{color: rgb(84, 91, 201);}
+main .form-footer-links .fa-envelope{color: rgb(216, 37, 37);}
+
+@media (max-width: 768px) {
+    main .main-login-page {
+        width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    main .main-login-page {
+        width: 225px;
+    }
+}
