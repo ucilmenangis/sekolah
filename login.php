@@ -7,7 +7,6 @@
         header("location:sekolah.php");
         exit();
     }
-
     if(isset($_SESSION['login'])){
         header("location:sekolah.php");
         exit();
@@ -52,7 +51,7 @@
             </div>
 
             <div class="remember-me">
-                <label for="nama">Remeber me : </label>
+                <label for="nama">Remeber me (Borked!) : </label>
                 <input type="checkbox" name="cookie">
             </div>
             <div class="submit-button">
@@ -78,7 +77,9 @@
                             $_SESSION["login"] = $username;
                             $_SESSION["level"] = $row['level_user'];
                             if(isset($_POST["cookie"])){
-                                setcookie("remember","true", time()+ 25,"/");
+                                setcookie("remember" , $username , time()+ 25,"/");
+                                setcookie("remember-pw" , $password , time()+ 25,"/");
+                                setcookie("level" , $row['level_user'] , time()+ 25, "/");
                                 echo "<script>
                                     alert('Cookie Activated')
                                     window.location.href = 'sekolah.php'
