@@ -1,2 +1,5 @@
-PENTING!!!
-import terlebih dahulu file mysql.sql
+-Cookies Borked
+-Bad Logic
+-Bad English
+-Bad Management
+-Poor Coding

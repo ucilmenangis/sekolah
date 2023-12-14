@@ -53,6 +53,7 @@
             <div class="remember-me">
                 <label for="nama">Remeber me (Borked!) : </label>
                 <input type="checkbox" name="cookie">
+                <i class="fa-solid fa-triangle-exclamation" style="color: yellow;"></i>
             </div>
             <div class="submit-button">
                 <input type="submit" name="confirm" value="LOGIN">
