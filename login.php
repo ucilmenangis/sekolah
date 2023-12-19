@@ -95,16 +95,11 @@
                                 </script>
                             ";
                             exit();
-                        }else{
-                            echo "<script>alert('try again')</script>";
-                            exit();
                         }
-                    
                     }
                 }
             ?>
         </form>        
     </main>
-
 </body>
 </html>
