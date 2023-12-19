@@ -4,6 +4,7 @@
 
     if(isset($_COOKIE['remember'])){
         $_SESSION["login"] = $_COOKIE["remember"];
+        $_SESSION["level"] = $_COOKIE["level"];
         header("location:sekolah.php");
         exit();
     }
@@ -30,6 +31,9 @@
         <div class="nav-logo">
             <img src="img/Untitled.png">
             <h3>SMKN 1 Bondowoso</h3>
+        </div>
+        <div class="nav-links">
+            <a href="sekolah.php">Home</a>
         </div>
     </nav>
 <!-- login -->
@@ -74,13 +78,11 @@
                         $username = $_POST["nama"];
                         $password = $_POST["password"];
                         if($username === $row["nama_user"] && $password === $row["password_user"]){
-                            $level = $row["level_user"];
                             $_SESSION["login"] = $username;
                             $_SESSION["level"] = $row['level_user'];
                             if(isset($_POST["cookie"])){
-                                setcookie("remember" , $username , time()+ 25,"/");
-                                setcookie("remember-pw" , $password , time()+ 25,"/");
-                                setcookie("level" , $row['level_user'] , time()+ 25, "/");
+                                setcookie("remember" , $username , time()+ 125,"/");
+                                setcookie("level" , $row['level_user'] , time()+ 125, "/");
                                 echo "<script>
                                     alert('Cookie Activated')
                                     window.location.href = 'sekolah.php'
@@ -95,8 +97,8 @@
                             ";
                             exit();
                         }else{
-                            // echo "<script>alert('try again')</script>";
-                            // exit();
+                            echo "<script>alert('try again')</script>";
+                            exit();
                         }
                     
                     }

@@ -87,7 +87,7 @@
                 <div class="main-content-text">
                     <h1>Database Status : <?php echo $status?></h1>
                     <p>Hello <?php echo $_SESSION["login"]; ?>, Levelmu adalah <?php echo $_SESSION["level"]; ?>. Silahkan lakukan sesuatu sesuai dengan levelmu. Selamat mencoba</p>
-                </div> 
+                </div>
             </div>
             <div class="main-content-item">
                 <?php
