@@ -1,6 +1,7 @@
 <?php 
     include "connect.php";
     include "check_login.php";
+    include "test2.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,11 +28,11 @@
         <div class="nav-links">
             <div class="nav-a">
                 <form method="GET">
-                    <a onclick="showSearch()" type="button" class="fa-solid fa-search fa-lg" id="search-button-1"></a>                      
                     <input type="text" placeholder="Search..." name="cari" id="search-input-1">
-                </form>   
-                <a href="sekolah.php">Home</a>
-                <a href="logout.php" class="fa-solid fa-user fa-lg"></a>
+                    <a onclick="showSearch()" type="button" class="fa-solid fa-search fa-lg" id="search-button-1"></a>
+                </form>
+                <a href="sekolah.php" class="fa-solid fa-house"></a>
+                <a type="button" onclick="clickNotification()" class="fa-solid fa-user fa-lg" id="buttonNotification"></a>
             </div>
             <div class="nav-search" id="search-link">
                 <form method="GET">
@@ -43,6 +44,18 @@
                 <div></div>
                 <div></div>
                 <div></div>
+            </div>
+        </div>
+        <!-- notification -->
+        <div class="notification" id="notification">
+            <div class="notification-body">
+                <h1>Hi, <?php echo $_SESSION['login'];?></h1>
+                <br>
+                <p>Level : <?php echo $_SESSION['level'];?></p>
+                <div class="notification-body-links">
+                    <a href="profile.php">Profile</a>                    
+                    <a href="logout.php">Logout</a>
+                </div>         
             </div>
         </div>
     </nav>
@@ -87,13 +100,13 @@
                 <div class="main-content-text">
                     <h1>Database Status : <?php echo $status?></h1>
                     <p>Hello <?php echo $_SESSION["login"]; ?>, Levelmu adalah <?php echo $_SESSION["level"]; ?>. Silahkan lakukan sesuatu sesuai dengan levelmu. Selamat mencoba</p>
-                </div>
+                </div> 
             </div>
             <div class="main-content-item">
                 <?php
                     if(isset($_GET['cari'])){
                         $pencarian = $_GET['cari'];
-                        $sql = "SELECT * FROM data_siswa WHERE nama_siswa LIKE '%".$pencarian."%'";
+                        $sql = "SELECT * FROM data_siswa WHERE nama_siswa LIKE '%".$pencarian."%' OR nisn_siswa LIKE '%".$pencarian."%'";
                     }else{
                         $sql = "SELECT * FROM data_siswa";
                     }

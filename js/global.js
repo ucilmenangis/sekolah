@@ -11,3 +11,10 @@ navMenuButton.addEventListener('click',() => {
         trueOrNot = false
     }
 })
+
+const notification = document.getElementById("notification")
+const buttonNotification = document.getElementById("buttonNotification")
+
+function clickNotification () {
+    notification.classList.toggle("zero-left")
+}

@@ -33,7 +33,7 @@
             <h3>SMKN 1 Bondowoso</h3>
         </div>
         <div class="nav-links">
-            <a href="sekolah.php">Home</a>
+            <a href="sekolah.php" class="fa-solid fa-house"></a>
         </div>
     </nav>
 <!-- login -->
@@ -55,9 +55,8 @@
             </div>
 
             <div class="remember-me">
-                <label for="nama">Remeber me (Borked!) : </label>
+                <label for="nama">Remeber me : </label>
                 <input type="checkbox" name="cookie">
-                <i class="fa-solid fa-triangle-exclamation" style="color: yellow;"></i>
             </div>
             <div class="submit-button">
                 <input type="submit" name="confirm" value="LOGIN">

@@ -1,5 +1,6 @@
 <?php 
 include "check_login.php";
+include "blank_page.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

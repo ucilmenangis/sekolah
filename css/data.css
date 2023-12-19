@@ -3,14 +3,48 @@ html {
     font:'Roboto', sans-serif;
 }
 
-body {
-    height: 100%;
-}
-
 nav {
     background-color: rgba(9,27,64,1);
     z-index: 99;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.notification {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    left: 450px;
+    transition: 300ms ease ;
+}
+
+.notification-body {
+    border: 2px solid black;
+    box-shadow: 3px 6px 18px 0px rgba(0,0,0,0.75);
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 400px;
+    padding: 10px;
+    background-color: rgba(9,27,64,1);
+    border-radius: 15px ;
+    height: auto;
+    color: rgb(255, 255, 255);
+}
+
+.notification-body-links {
+    display: flex;
+    gap: 20px;
+}
+
+.notification-body-links a{
+    text-align: center;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 5px;
 }
 
 .nav-res {
@@ -40,6 +74,7 @@ nav {
     display: flex;
     gap: 10px;
     align-items: center;
+    text-decoration: none;
 }
 
 .nav-res .nav-res-links ul li a p {
@@ -283,8 +318,16 @@ main .main-content .main-content-item .card-new .card-action .card-action-delete
     nav .nav-logo h3 {
         display: none;
     }
+
+    .notification .notification-body {
+        width: 300px;
+    }
 }
 
 .flex {
     display: flex;
+}
+
+.zero-left {
+    left: 0;
 }

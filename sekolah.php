@@ -36,7 +36,7 @@
                 <?php 
                 if(isset($_SESSION['login'])){
                     echo "<a href='data.php' id='data'>Data</a>";
-                    echo "<a href='logout.php' id='logout'>Logout</a>";
+                    echo "<a type='button' onclick='clickNotification()' class='fa-solid fa-user fa-lg' id='buttonNotification'></a>";
                     // echo "<a href='logout.php' class='fa-regular fa-address-card'></a>";
                 }
 
@@ -52,6 +52,23 @@
                 <div></div>
             </div>
         </div>
+        <?php 
+        if(isset($_SESSION['login'])){
+            echo "
+            <!-- notification -->
+            <div class='notification' id='notification'>
+            <div class='notification-body'>
+                    <h1>Hi,". $_SESSION['login'] ."</h1>
+                    <br>
+                    <p>Level : ". $_SESSION['level'] ."</p>
+                    <div class='notification-body-links'>
+                        <a href='profile.php'>Profile</a>
+                        <a href='logout.php'>Logout</a>
+                    </div>
+                </div>
+            </div>";            
+        }
+        ?>
     </nav>
     <!-- navbar-menu -->
     <div class="nav-res" id="nav-res">

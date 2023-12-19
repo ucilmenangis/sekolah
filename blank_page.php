@@ -1,5 +1,4 @@
 <?php 
-include "check_login.php";
 echo "<script>
 alert('maaf halaman belum dibuat!')
 window.location.href = 'data.php'
