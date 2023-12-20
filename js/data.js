@@ -10,17 +10,3 @@ function showSearch(){
         searchInput2.style.display = "flex"
     }       
 }
-
-const notification = document.getElementById("notification")
-const buttonNotification = document.getElementById("buttonNotification")
-
-function clickNotification () {
-    notification.classList.toggle("zero-left")
-}
-// buttonNotification.addEventListener("click", () => {
-//     notification.style.right = "200px"
-// })
-
-// search1.addEventListener('click',() => {
-//     searchInput1.style.display = "flex"
-// })
